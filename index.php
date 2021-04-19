@@ -30,6 +30,7 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
                     <td>$i</td>
                     <td><a href='detail.php?id=$user[id]'>$user[firstname] $user[lastname]</a> 
                     <a onclick='return confirm(\"Are you sure?\");' href='delete.php?id=$user[id]' style='color: red'>x</a>
+                    <a href='edit.php?id=$user[id]' style='color: green'>I</a>
                     </td>
     
                </tr>";
