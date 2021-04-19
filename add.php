@@ -1,7 +1,7 @@
 <?php
 require 'include/init.php';
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if (isPostMethod()) {
     $firstname = $_REQUEST['firstname'];
     $lastname = $_REQUEST['lastname'];
     $email = $_REQUEST['email'];

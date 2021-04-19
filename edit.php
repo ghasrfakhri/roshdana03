@@ -4,7 +4,7 @@ require 'include/init.php';
 $id = $_GET['id'];
 
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if (isPostMethod()) {
     $firstname = $_REQUEST['firstname'];
     $lastname = $_REQUEST['lastname'];
     $email = $_REQUEST['email'];
@@ -23,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
 
-    header("Location: index.php");
-    exit;
+    redirectToUrl('index.php');
 }
 
 $query = "SELECT id, firstname, lastname, age, email FROM user WHERE id=$id";
