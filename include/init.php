@@ -1,6 +1,4 @@
 <?php
-
-
 $db = new mysqli('localhost', 'root', '', 'roshdana02');
 
 
@@ -14,3 +12,5 @@ function redirectToUrl($url)
     header("Location: $url");
     exit;
 }
+
+require 'user.php';

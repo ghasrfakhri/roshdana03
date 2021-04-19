@@ -3,9 +3,7 @@ require 'include/init.php';
 
 $id = $_GET['id'];
 
-$result = $db->query("SELECT id, firstname, lastname, age, email FROM user WHERE id=$id");
-
-$user = $result->fetch_assoc();
+$user = getUser($id);
 
 ?><!doctype html>
 <html lang="en">

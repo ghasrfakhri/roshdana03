@@ -8,9 +8,7 @@ if (isPostMethod()) {
     $password = $_REQUEST['password'];
     $age = $_REQUEST['age'];
 
-    $query = "INSERT INTO user SET firstname='$firstname', lastname='$lastname', email='$email', age='$age', password='$password'";
-
-    $result = $db->query($query);
+    addUser($firstname, $lastname, $email, $age, $password);
 }
 ?><!doctype html>
 <html lang="en">

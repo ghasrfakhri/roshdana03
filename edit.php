@@ -10,30 +10,13 @@ if (isPostMethod()) {
     $email = $_REQUEST['email'];
     $age = (int)$_REQUEST['age'];
 
-//    if($age == ""){
-//        $age = 0;
-//    }
-
-    $query = "UPDATE user SET firstname='$firstname', lastname='$lastname', email='$email', age=$age WHERE id=$id";
-    $result = $db->query($query);
-    if (false === $result) {
-        echo $query . "<br>";
-        echo $db->error;
-        exit;
-    }
+    updateUser($id, $firstname, $lastname, $email, $age);
 
 
     redirectToUrl('index.php');
 }
 
-$query = "SELECT id, firstname, lastname, age, email FROM user WHERE id=$id";
-$result = $db->query($query);
-if (false === $result) {
-    echo $query . "<br>";
-    echo $db->error;
-    exit;
-}
-$user = $result->fetch_assoc();
+$user = getUser($id);
 
 
 ?><!doctype html>

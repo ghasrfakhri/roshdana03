@@ -2,9 +2,7 @@
 
 require 'include/init.php';
 
-$result = $db->query("SELECT id, firstname, lastname FROM user");
-
-$users = $result->fetch_all(MYSQLI_ASSOC);
+$users = getUserList();
 
 ?><!doctype html>
 <html lang="en">
