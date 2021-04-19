@@ -1,5 +1,6 @@
 <?php
-$db = new mysqli('localhost', 'root', '', 'roshdana02');
+require 'include/init.php';
+
 $id = $_GET['id'];
 $query = "DELETE FROM user WHERE id=$id";
 $db->query($query);

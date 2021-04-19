@@ -1,7 +1,6 @@
 <?php
-$db = new mysqli('localhost', 'root', '', 'roshdana02');
 
-
+require 'include/init.php';
 
 $result = $db->query("SELECT id, firstname, lastname FROM user");
 

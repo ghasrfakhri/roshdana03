@@ -1,5 +1,5 @@
 <?php
-$db = new mysqli('localhost', 'root', '', 'roshdana02');
+require 'include/init.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $firstname = $_REQUEST['firstname'];
