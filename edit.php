@@ -1,10 +1,11 @@
 <?php
 require 'include/init.php';
 
-$id = $_GET['id'];
+$id = $_REQUEST['id'];
 
 
 if (isPostMethod()) {
+
     $firstname = $_REQUEST['firstname'];
     $lastname = $_REQUEST['lastname'];
     $email = $_REQUEST['email'];
@@ -30,7 +31,8 @@ $user = getUser($id);
 </head>
 <body>
 <a href="index.php">back</a>
-<form method="post">
+<form action="edit.php" method="post">
+    <input type="hidden" name="id" value="<?= $id ?>">
     <label>
         First Name: <input type="text" name="firstname" value="<?= $user['firstname'] ?>">
     </label><br>
